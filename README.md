@@ -1,7 +1,7 @@
 # Object Oriented Programming SVG Logo Maker
 
 ## Description
-This application enables to add input into a inquirer prompt that creates a      svg.logo file which is the file that will show the users their desired logo.
+This application enables to add input into a inquirer prompt that creates a svg.logo file which is the file that will show users their desired logo.
 
 Uses the Inquirer packageLinks to an external site..
 
@@ -12,12 +12,14 @@ The application must have Triangle, Square, and Circle classes.
 # Overview
 
 ## UserStory
+```
 AS a freelance web developer
 I WANT to generate a simple logo for my projects
 SO THAT I don't have to pay a graphic designer
-
+```
 
 ## Acceptance Criteria
+```
 GIVEN a command-line application that accepts user input
 WHEN I am prompted for text
 THEN I can enter up to three characters
@@ -32,6 +34,7 @@ THEN an SVG file is created named `logo.svg`
 AND the output text "Generated logo.svg" is printed in the command line
 WHEN I open the `logo.svg` file in a browser
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
+```
 
 ## Usage Instructions
 
