@@ -1,7 +1,7 @@
 {
   "name": "shapes",
   "scripts": {
-    "test": "just --watch"
+    "test": "jest --watch"
   },
   "dependencies": {
     "inquirer": "^9.2.8",
