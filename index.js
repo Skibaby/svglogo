@@ -7,6 +7,8 @@ const prompt = inquirer.createPromptModule();
 //
 // const {renderLogo} = require('./.git')
 
+const { Circle, Square, Triangle} = require("./lib/shapes")
+
 const questions = [
   {
     message: "Enter text",
