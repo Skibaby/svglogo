@@ -4,10 +4,8 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 const prompt = inquirer.createPromptModule();
-//
-// const {renderLogo} = require('./.git')
 
-const { Circle, Square, Triangle} = require("./lib/shapes")
+const shapes = require('./lib/shapes.js');
 
 const questions = [
   {
@@ -24,23 +22,30 @@ const questions = [
     }
   },
   {
-    message: "Enter a text color",
-    name: "textColor",
+    message: "Enter color",
+    name: "color",
     type: "input",
     default: "blue"
   
+  },
+  {
+    message: "Choose your preferred shape",
+    name: "shape",
+    type: "rawlist",
+    choices: ["Triangle","Square","Circle"]
+
+
   }
 ];
 
-function makeLogo(answer) {
-  console.log("working")
+const makeLogo = (answer) => {
+  const shape = new shapes[answer.shape]();
+  shape.setColor(answer.color);
+  shape.setText(answer.text);
+  console.log(shape.render());
+  fs.writeFileSync('image.svg', shape.render(), 'utf-8');
+  console.log('RENDERED');
 }
+const init = () => prompt(questions).then(makeLogo);
 
-function init () {
-
-  prompt(questions)
-  .then(makeLogo)
-  
-}
-
-init()
+init();
