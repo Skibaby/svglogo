@@ -9,7 +9,6 @@ Uses the Jest packageLinks to an external site. for a suite of unit tests.
 
 The application must have Triangle, Square, and Circle classes.
 
-# Overview
 
 ## UserStory
 ```
@@ -44,9 +43,6 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 4. The user will be presented with npm inquirer questions - the user will provide a response to each question and proceed.
 5.Once completed a SVG file named "logo.svg" will be created.
 (the user may rename the "logo.svg" file to the file name of preference)
-## Walkthrough Video 
-
-## Screenshot
 
 ## Installation Process
 
